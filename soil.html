@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soil Health | AgroLife</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+body{
+    background:#f0fff4;
+}
+
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+}
+.navbar-brand {
+    color: #2e7d32 ;
+    font-weight: 700;
+}
+.nav-link {
+    color: #1b5e20 ;
+    font-weight: 500;
+}
+.nav-link:hover {
+    color: #00c853;
+}
+.navbar-nav{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* NAVBAR SOCIAL ICONS */
+.navbar .social-icons a{
+    color: #1b5e20 ;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.navbar .social-icons a:hover{
+    color: #00c853;
+}
+
+/* HERO SECTION */
+.soil-hero{
+    background:url('media/soil.jpg') center/cover no-repeat;
+    height:45vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+.soil-overlay{
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.45);
+}
+.soil-content{
+    position:relative;
+    color:white;
+}
+
+/* INFO SECTION */
+.soil-info{
+    background:#e8f5e9;
+    padding:60px 0;
+}
+
+.intro-img{
+    max-width: 70%;     
+    border-radius: 20px; /* soft rounded shape */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+
+/* FEATURE CARDS */
+.feature-card{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+.feature-card:hover{
+    transform:translateY(-5px);
+}
+.feature-card i{
+    font-size:30px;
+    color:#2e7d32;
+}
+
+/* ACCORDION */
+.accordion-button:not(.collapsed){
+    background:#e8f5e9;
+    color:#1b5e20;
+}
+
+/* TABS */
+.nav-tabs .nav-link{
+    color:#1b5e20;
+}
+.nav-tabs .nav-link.active{
+    background:#e8f5e9;
+    color:#1b5e20;
+}
+
+/* CHECKLIST */
+.checklist li{
+    list-style:none;
+    margin-bottom:8px;
+}
+.checklist li::before{
+    content:"✔ ";
+    color:#2e7d32;
+}
+
+/* SOIL TYPE CARDS */
+.soil-card{
+    border-radius:18px;
+    border:none;
+    overflow:hidden;
+    background:white;
+    transition:0.3s;
+    box-shadow:0 6px 15px rgba(0,0,0,0.08);
+}
+.soil-card:hover{
+    transform:translateY(-6px);
+}
+.soil-card img{
+    height:220px;
+    object-fit:cover;
+}
+
+
+
+/* FOOTER */
+.modern-footer {
+    background: linear-gradient(to right, #f0fff4, #e6ffee);
+    color: #1b5e20;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+  <div class="container-fluid">
+    <img src="media/img1.jpg" width="50" alt="logo">
+    <a class="navbar-brand ms-2" href="index.html">AgroLife</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Farming</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="crops.html">Crop Farming</a></li>
+            <li><a class="dropdown-item" href="horticulture.html">Horticulture</a></li>
+            <li><a class="dropdown-item" href="organic.html">Organic Farming</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Livestock</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="livestock.html">Livestock Management</a></li>
+            <li><a class="dropdown-item" href="dairy.html">Dairy Farming</a></li>
+            <li><a class="dropdown-item" href="poultry.html">Poultry Farming</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Resources</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="irrigation.html">Irrigation</a></li>
+            <li><a class="dropdown-item" href="machinery.html">Farm Machinery</a></li>
+            <li><a class="dropdown-item" href="soil.html">Soil Health</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="soil-hero">
+  <div class="soil-overlay"></div>
+  <div class="container soil-content text-center">
+    <h1 class="display-4 fw-bold">Soil Health</h1>
+    <p class="lead">
+      Understanding soil quality for sustainable and productive agriculture.
+    </p>
+  </div>
+</section>
+
+<!-- WHAT IS SOIL HEALTH -->
+<section class="soil-info">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="fw-bold text-success">🌱 What is Soil Health?</h2>
+        <p>
+          Soil health refers to the ability of soil to function as a living ecosystem that sustains plants, animals,
+          and humans. Healthy soil supports plant growth, improves water retention, and enhances biodiversity.
+        </p>
+        <p>
+          Good soil health is essential for sustainable agriculture because it ensures nutrient availability,
+          prevents soil erosion, and reduces dependency on chemical fertilizers.
+        </p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="media/soil2.jpg" class="intro-img" alt="Soil Image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--SOIL TESTING -->
+<section class="py-5" style="background:#e8f5e9;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-success"> Soil Testing</h2>
+      <p class="text-muted">Click, explore, and understand soil testing.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-6">
+        <div class="feature-card h-100">
+          <h5>What is Soil Testing?</h5>
+          <p>
+            Soil testing is a scientific method in which soil samples are collected from fields and analyzed in a laboratory.
+            It helps farmers understand nutrient levels, pH value, and fertility of soil.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="feature-card h-100">
+          <h5>Why is Soil Testing Important?</h5>
+          <ul class="checklist">
+            <li>Correct use of fertilizers</li>
+            <li>Prevents overuse of chemicals</li>
+            <li>Improves crop yield</li>
+            <li>Reduces farming cost</li>
+            <li>Maintains long-term soil health</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <h5 class="fw-bold mb-3">How is Soil Testing Done?</h5>
+        <div class="accordion" id="soilSteps">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#step1">
+                Step 1 – Collect Soil Sample
+              </button>
+            </h2>
+            <div id="step1" class="accordion-collapse collapse show">
+              <div class="accordion-body">
+                Farmers collect soil from different parts of the field using a soil auger or spade.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#step2">
+                Step 2 – Mix & Dry Sample
+              </button>
+            </h2>
+            <div id="step2" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                The collected samples are mixed, dried, and prepared for testing.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#step3">
+                Step 3 – Laboratory Testing
+              </button>
+            </h2>
+            <div id="step3" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                The sample is tested in a lab for pH, nutrients (NPK), and organic matter.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 mt-4">
+        <h5 class="fw-bold mb-3">What Does a Soil Test Report Tell?</h5>
+
+        <ul class="nav nav-tabs" id="soilTabs">
+          <li class="nav-item">
+            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#ph">Soil pH</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#npk">NPK Levels</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#organic">Organic Matter</button>
+          </li>
+        </ul>
+
+        <div class="tab-content p-4 bg-white rounded shadow">
+          <div class="tab-pane fade show active" id="ph">
+            <p>Shows whether soil is acidic, neutral, or alkaline.</p>
+          </div>
+          <div class="tab-pane fade" id="npk">
+            <p>Shows levels of Nitrogen, Phosphorus, and Potassium.</p>
+          </div>
+          <div class="tab-pane fade" id="organic">
+            <p>Indicates organic content which improves fertility.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="modern-footer py-5 text-center">
+  <h4 class="fw-bold">🌱 AgroLife</h4>
+  <p>Promoting sustainable agriculture.</p>
+  <hr>
+  <p class="small">© 2025 AgroLife • Made with care for nature 🌍</p>
+</footer>
+
+</body>
+</html>

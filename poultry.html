@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poultry Farming | AgroLife</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f8f4;
+}
+
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+}
+.navbar-brand {
+    color: #2e7d32 ;
+    font-weight: 700;
+}
+.nav-link {
+    color: #1b5e20;
+    font-weight: 500;
+}
+.nav-link:hover {
+    color: #00c853 ;
+}
+.dropdown-menu {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+.dropdown-item:hover {
+    background-color: #e8f5e9;
+}
+
+/* CENTER MENU ITEMS */
+.navbar-nav{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* SOCIAL ICONS (RIGHT SIDE) */
+.navbar .social-icons{
+    display: flex;
+    gap: 12px;
+}
+
+.navbar .social-icons a{
+    color: #1b5e20;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.navbar .social-icons a:hover{
+    color: #00c853;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('media/poultry1.jpg');
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-title {
+    color: #0b6623;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card {
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-box {
+    font-size: 40px;
+    color: #0b6623;
+    margin-bottom: 10px;
+}
+
+/* ===== FOOTER ===== */
+.modern-footer {
+    background: #e8f5e9;
+    color: #1b5e20;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+  <div class="container-fluid">
+
+    <img src="media/img1.jpg" width="50" alt="logo">
+    <a class="navbar-brand ms-2" href="index.html">AgroLife</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <!-- CENTERED MENU -->
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Farming</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="crops.html">Crop Farming</a></li>
+            <li><a class="dropdown-item" href="horticulture.html">Horticulture</a></li>
+            <li><a class="dropdown-item" href="organic.html">Organic Farming</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Livestock</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="livestock.html">Livestock Management</a></li>
+            <li><a class="dropdown-item" href="dairy.html">Dairy Farming</a></li>
+            <li><a class="dropdown-item" href="poultry.html">Poultry Farming</a></li>
+          </ul>
+        </li>
+
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Resources</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="irrigation.html">Irrigation</a></li>
+            <li><a class="dropdown-item" href="machinery.html">Farm Machinery</a></li>
+            <li><a class="dropdown-item" href="soil.html">Soil Health</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- SOCIAL ICONS (RIGHT) -->
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero">
+<div class="container">
+    <h1 class="display-4">Sustainable Poultry Farming</h1>
+    <p class="lead">
+    Scientifically managed poultry farming that ensures healthy birds, 
+    high-quality eggs and meat, and profitable farming for rural entrepreneurs.
+    </p>
+</div>
+</div>
+
+<!-- About Section -->
+<section class="container my-5">
+<h2 class="section-title">What is Poultry Farming?</h2>
+
+<div class="row align-items-center g-4">
+<div class="col-md-7">
+<p>
+Poultry farming is the practice of raising domesticated birds such as chickens, ducks, turkeys, and geese 
+for the production of meat and eggs. It is one of the fastest-growing sectors in agriculture due to its 
+short production cycle, high demand, and economic viability.
+</p>
+
+<p>
+Modern poultry farming integrates traditional knowledge with scientific methods such as controlled housing, 
+balanced nutrition, biosecurity measures, and veterinary care to improve productivity while ensuring 
+animal welfare and food safety. It plays a vital role in meeting global protein demand and supporting 
+rural livelihoods.
+</p>
+</div>
+
+<div class="col-md-5">
+<img src="media/poultry1.jpg"
+class="img-fluid rounded shadow">
+</div>
+</div>
+</section>
+
+<!-- Key Components -->
+<section class="container my-5">
+<h2 class="section-title">Key Components of Poultry Farming</h2>
+<div class="row">
+
+<div class="col-md-4 mb-4">
+<div class="card p-4 text-center">
+<i class="fa-solid fa-house icon-box"></i>
+<h5>Housing</h5>
+<p>
+Well-designed poultry houses with proper ventilation, temperature control, lighting, and space management 
+help maintain bird health, reduce stress, and prevent disease outbreaks.
+</p>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="card p-4 text-center">
+<i class="fa-solid fa-bowl-food icon-box"></i>
+<h5>Nutrition</h5>
+<p>
+A scientifically formulated diet containing proteins, carbohydrates, fats, vitamins, and minerals 
+is essential for rapid growth, strong immunity, and high egg production.
+</p>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="card p-4 text-center">
+<i class="fa-solid fa-notes-medical icon-box"></i>
+<h5>Health Care</h5>
+<p>
+Regular vaccination, cleanliness, disease monitoring, and timely veterinary intervention 
+are crucial to prevent infections and maintain flock productivity.
+</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Benefits Section -->
+<section class="container my-5">
+<h2 class="section-title">Benefits of Poultry Farming</h2>
+<ul class="list-group">
+<li class="list-group-item">✔ Requires relatively low investment compared to other livestock</li>
+<li class="list-group-item">✔ Generates quick and regular income</li>
+<li class="list-group-item">✔ Creates employment in rural and semi-urban areas</li>
+<li class="list-group-item">✔ Provides high-protein eggs and meat for nutrition</li>
+<li class="list-group-item">✔ Supports sustainable farming through manure utilization</li>
+</ul>
+</section>
+
+<!-- Types of Poultry -->
+<section class="container my-5">
+<h2 class="section-title">Types of Poultry Farming</h2>
+<div class="row">
+
+<div class="col-md-6 mb-4">
+<div class="card p-4">
+<h5>Broiler Farming</h5>
+<p>
+Broiler farming focuses on raising chickens specifically for meat production. 
+These birds grow rapidly and are typically ready for market within 6–8 weeks, 
+making it a highly profitable and time-efficient system.
+</p>
+</div>
+</div>
+
+<div class="col-md-6 mb-4">
+<div class="card p-4">
+<h5>Layer Farming</h5>
+<p>
+Layer farming is dedicated to egg production. These birds are reared for a longer period 
+and managed carefully to ensure consistent egg laying with good shell quality and size.
+</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- MODERN PRACTICES-->
+<section class="container my-5">
+<h2 class="section-title">Modern Practices in Poultry Farming</h2>
+
+<div class="row align-items-center g-4">
+<div class="col-md-5">
+<img src="media/poultry3.jpg"
+class="img-fluid rounded shadow">
+
+</div>
+
+<div class="col-md-7">
+<p>
+Today’s poultry farms rely on advanced technology and scientific management to maximize productivity while 
+ensuring animal welfare and environmental sustainability.
+</p>
+
+<ul>
+<li><b>Automated Feeding & Watering:</b> Reduces labor and ensures consistent nutrition.</li>
+<li><b>Climate-Controlled Housing:</b> Maintains ideal temperature and humidity for bird comfort.</li>
+<li><b>Biosecurity Measures:</b> Prevents entry of diseases through strict sanitation and restricted access.</li>
+<li><b>Data Monitoring:</b> Sensors track temperature, humidity, and bird health in real time.</li>
+<li><b>Waste Management:</b> Poultry manure is converted into organic fertilizer or biogas.</li>
+<li><b>Ethical Farming:</b> Focus on humane treatment, proper space, and reduced stress.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="modern-footer py-5">
+  <div class="container text-center">
+    <h4 class="fw-bold">🌱 AgroLife</h4>
+    <p>Promoting sustainable agriculture.</p>
+    <hr>
+    <p class="small">© 2025 AgroLife • Made with care for nature 🌍</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

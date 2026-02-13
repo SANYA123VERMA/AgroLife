@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crops | AgroLife</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+body{
+    background:#f0fff4;
+}
+
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+}
+.navbar-brand {
+    color: #2e7d32 ;
+    font-weight: 700;
+}
+.nav-link {
+    color: #1b5e20 ;
+    font-weight: 500;
+}
+.nav-link:hover {
+    color: #00c853 ;
+}
+.dropdown-menu {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+.dropdown-item:hover {
+    background-color: #e8f5e9;
+}
+
+/* CENTER MENU ITEMS */
+.navbar-nav{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* SOCIAL ICONS (RIGHT SIDE) */
+.navbar .social-icons{
+    display: flex;
+    gap: 12px;
+}
+
+.navbar .social-icons a{
+    color: #1b5e20;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.navbar .social-icons a:hover{
+    color: #00c853;
+}
+
+/* HERO SECTION */
+.crop-hero{
+    background:url('media/wheat.jpg') center/cover no-repeat;
+    height:45vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+.crop-overlay{
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.45);
+}
+.crop-content{
+    position:relative;
+    color:white;
+}
+
+
+/* //////////// */
+.crop-info-section{
+    background: linear-gradient(to right, #e8f5e9, #f0fff4);
+    padding:70px 0;
+}
+
+.info-card{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+.info-card:hover{
+    transform:translateY(-5px);
+}
+
+.info-card h5{
+    color:#1b5e20;
+    font-weight:700;
+}
+
+.info-card p{
+    color:#1b5e20;
+    line-height:1.7;
+}
+
+/* CROPS GRID */
+.crop-card{
+    border-radius:18px;
+    border:none;
+    overflow:hidden;
+    background:white;
+    transition:0.3s;
+    box-shadow:0 6px 15px rgba(0,0,0,0.08);
+}
+.crop-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 22px rgba(0,0,0,0.12);
+}
+.crop-card img{
+    height:220px;
+    object-fit:cover;
+}
+
+/* MODAL STYLE */
+.modal-header{
+    background:#e8f5e9;
+}
+.modal-title{
+    color:#1b5e20;
+    font-weight:700;
+}
+.modal-body h6{
+    color:#2e7d32;
+    font-weight:600;
+}
+.modal-body a{
+    color:#0d6efd;
+    text-decoration:none;
+    font-weight:600;
+}
+.modal-body a:hover{
+    text-decoration:underline;
+}
+
+/* footer */
+.modern-footer {
+    background: linear-gradient(to right, #f0fff4, #e6ffee);
+    color: #1b5e20;
+}
+
+.footer-brand {
+    font-weight: 700;
+    color: #2e7d32;
+}
+
+.footer-text {
+    font-size: 0.95rem;
+    color: #2e7d32;
+}
+
+.footer-heading {
+    color: #1b5e20;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 6px;
+}
+
+.footer-links a {
+    color: #2e7d32;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #00c853;
+    padding-left: 5px;
+}
+
+.social-icons a {
+    font-size: 22px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.footer-line {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.small-footer {
+    opacity: 0.8;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+  <div class="container-fluid">
+
+    <img src="media/img1.jpg" width="50" alt="logo">
+    <a class="navbar-brand ms-2" href="index.html">AgroLife</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <!-- CENTERED MENU -->
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Farming</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="crops.html">Crop Farming</a></li>
+            <li><a class="dropdown-item" href="horticulture.html">Horticulture</a></li>
+            <li><a class="dropdown-item" href="organic.html">Organic Farming</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Livestock</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="livestock.html">Livestock Management</a></li>
+            <li><a class="dropdown-item" href="dairy.html">Dairy Farming</a></li>
+            <li><a class="dropdown-item" href="poultry.html">Poultry Farming</a></li>
+          </ul>
+        </li>
+
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Resources</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="irrigation.html">Irrigation</a></li>
+            <li><a class="dropdown-item" href="machinery.html">Farm Machinery</a></li>
+            <li><a class="dropdown-item" href="soil.html">Soil Health</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- SOCIAL ICONS (RIGHT) -->
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+
+    </div>
+  </div>
+</nav>
+<!-- END NAVBAR -->
+
+<!-- HERO -->
+<section class="crop-hero">
+  <div class="crop-overlay"></div>
+  <div class="container crop-content text-center">
+    <h1 class="display-4 fw-bold">Crops</h1>
+    <p class="lead">
+      Scientific understanding of crop seasons, cultivation, and farming processes.
+    </p>
+  </div>
+</section>
+
+
+<!-- //////// -->
+ <section class="crop-info-section">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-success">🌾 Understanding Crops</h2>
+      <p class="text-muted">Clear, structured and easy to understand.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="info-card h-100">
+          <h5>🌱 What is a Crop?</h5>
+          <p>
+            Crops are plants grown on a large scale for food, fiber, fodder, and industrial use. 
+            Farmers prepare land, sow seeds, irrigate, and manage fields in a planned way — this process is called cultivation.
+          </p>
+          <p>
+            Crops support agriculture and the economy by providing food, raw materials, and employment.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-card h-100">
+          <h5>🌾 Kharif & Rabi Crops</h5>
+          <p>
+            <strong>Kharif (June–October):</strong> Grown in the rainy season and need more water.  
+            Examples: Rice, Maize, Cotton.
+          </p>
+          <p>
+            <strong>Rabi (October–March):</strong> Grown in winter, need cooler climate and less water.  
+            Examples: Wheat, Mustard, Barley.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-card h-100">
+          <h5>☀️ Zaid Crops</h5>
+          <p>
+            Zaid crops are grown in summer (March–June). They are short-duration crops that grow quickly.
+          </p>
+          <p>
+            Mostly fruits and vegetables are grown in this season, giving farmers extra income.  
+            Examples: Watermelon, Muskmelon, Cucumber.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CROPS GRID -->
+<section class="py-5">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-success">🌾 Crop Varieties</h2>
+      <p class="text-muted">Major agricultural crops and their real-world importance.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- WHEAT -->
+      <div class="col-md-4">
+        <div class="card crop-card h-100">
+          <img src="media/wheat.jpg" class="card-img-top" alt="Wheat">
+          <div class="card-body text-center">
+            <h5>Wheat</h5>
+            <p>Rabi cereal crop grown in temperate regions.</p>
+            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#wheatModal">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RICE -->
+      <div class="col-md-4">
+        <div class="card crop-card h-100">
+          <img src="media/rice.jpg" class="card-img-top" alt="Rice">
+          <div class="card-body text-center">
+            <h5>Rice</h5>
+            <p>Major Kharif crop requiring flooded fields.</p>
+            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#riceModal">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIZE -->
+      <div class="col-md-4">
+        <div class="card crop-card h-100">
+          <img src="media/maize.jpg" class="card-img-top" alt="Maize">
+          <div class="card-body text-center">
+            <h5>Maize (Corn)</h5>
+            <p>Grown in both Kharif and Rabi seasons.</p>
+            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#maizeModal">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- VEGETABLES -->
+      <div class="col-md-4">
+        <div class="card crop-card h-100">
+          <img src="media/vegetables.jpg" class="card-img-top" alt="Vegetables">
+          <div class="card-body text-center">
+            <h5>Vegetables</h5>
+            <p>Grown in both Rabi and Kharif seasons.</p>
+            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#vegModal">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FRUITS -->
+      <div class="col-md-4">
+        <div class="card crop-card h-100">
+          <img src="media/fruits.jpg" class="card-img-top" alt="Fruits">
+          <div class="card-body text-center">
+            <h5>Fruits</h5>
+            <p>Seasonal and perennial fruit crops.</p>
+            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#fruitModal">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- COTTON -->
+      <div class="col-md-4">
+        <div class="card crop-card h-100">
+          <img src="media/cotton.jpg" class="card-img-top" alt="Cotton">
+          <div class="card-body text-center">
+            <h5>Cotton</h5>
+            <p>Kharif fiber crop known as “White Gold”.</p>
+            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#cottonModal">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- WHEAT MODAL -->
+<div class="modal fade" id="wheatModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Wheat</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+
+        <h6>What is Wheat?</h6>
+        <p>
+        Wheat is one of the most important cereal grains in the world, belonging to the genus <em>Triticum</em>.
+        </p>
+
+        <h6>Season (Rabi)</h6>
+        <p>Sown: October–November | Harvested: March–April</p>
+
+        <h6>Cultivation</h6>
+        <p>
+        Wheat requires well-drained loamy soil and a cool climate. Land is ploughed and leveled before sowing.
+        Irrigation is provided at key growth stages such as tillering and grain formation.
+        </p>
+
+        <h6>Importance</h6>
+        <ul>
+          <li>Major staple food crop worldwide</li>
+          <li>Supports bakery, pasta, and milling industries</li>
+          <li>Provides employment in rural areas</li>
+        </ul>
+
+        <h6>Harvesting & Storage</h6>
+        <p>
+        Wheat is harvested using combine harvesters or manually in some regions. It is stored in silos or warehouses.
+        </p>
+
+        <p><strong>Learn more (Farming & Cultivation):</strong><br>
+        <a href="https://www.fao.org/land-water/databases-and-software/crop-information/wheat/en/" target="_blank">
+        FAO – Wheat Cultivation & Farming
+        </a>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RICE MODAL -->
+<div class="modal fade" id="riceModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Rice</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+
+        <h6>What is Rice?</h6>
+        <p>
+        Rice is a staple cereal crop and the primary food source for more than half of the world's population.
+        </p>
+
+        <h6>Season (Kharif)</h6>
+        <p>Sown: June–July | Harvested: October–November</p>
+
+        <h6>Cultivation</h6>
+        <p>
+        Rice requires high water availability. Fields are puddled and transplanted with seedlings.
+        </p>
+
+        <h6>Importance</h6>
+        <ul>
+          <li>Staple food in Asia and Africa</li>
+          <li>Supports rice milling and export industries</li>
+          <li>Provides livelihood to millions of farmers</li>
+        </ul>
+
+        <h6>Harvesting & Storage</h6>
+        <p>
+        Rice is harvested using machines or manually and stored in granaries or mills.
+        </p>
+
+        <p><strong>Learn more (Paddy Farming & Irrigation):</strong><br>
+        <a href="https://www.fao.org/land-water/databases-and-software/crop-information/rice/en/" target="_blank">
+        FAO – Rice (Paddy) Farming & Water Management
+        </a>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIZE MODAL -->
+<div class="modal fade" id="maizeModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Maize (Corn)</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+
+        <h6>What is Maize?</h6>
+        <p>
+        Maize is a widely cultivated cereal used as food, animal feed, and industrial raw material.
+        </p>
+
+        <h6>Season</h6>
+        <p>Kharif: June–July | Rabi: October–November</p>
+
+        <h6>Cultivation</h6>
+        <p>
+        Maize grows best in warm climates with moderate rainfall. Fields are ploughed and seeds are sown in rows.
+        </p>
+
+        <h6>Importance</h6>
+        <ul>
+          <li>Major animal feed source</li>
+          <li>Used in biofuel and starch industries</li>
+          <li>Consumed as sweet corn and cornflakes</li>
+        </ul>
+
+        <h6>Harvesting & Storage</h6>
+        <p>
+        Harvested when kernels are mature and stored in dry conditions.
+        </p>
+
+        <p><strong>Learn more (Maize Farming & Field Management):</strong><br>
+        <a href="https://www.fao.org/land-water/databases-and-software/crop-information/maize/en/" target="_blank">
+        FAO – Maize Cultivation & Crop Management
+        </a>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VEGETABLE MODAL -->
+<div class="modal fade" id="vegModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Vegetables</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+
+        <h6>What are Vegetables?</h6>
+        <p>
+        Vegetables refer to edible plant parts such as roots, stems, leaves, flowers, fruits, or seeds 
+        that are consumed mainly as savory food.
+        </p>
+
+        <h6>Classification (Based on Plant Parts)</h6>
+        <ul>
+          <li>Root: Potato, carrot, beetroot, radish</li>
+          <li>Leafy: Spinach, lettuce, cabbage</li>
+          <li>Fruit: Tomato, brinjal, capsicum</li>
+          <li>Bulb: Onion, garlic</li>
+          <li>Flower: Broccoli, cauliflower</li>
+        </ul>
+
+        <h6>Season (India)</h6>
+        <ul>
+          <li><strong>Kharif:</strong> Tomato, Brinjal, Ladyfinger</li>
+          <li><strong>Rabi:</strong> Potato, Cabbage, Cauliflower</li>
+          <li><strong>Year-round:</strong> Onion, Garlic</li>
+        </ul>
+
+        <h6>Cultivation</h6>
+        <p>
+        Vegetables are grown in open fields, greenhouses, or through hydroponics.  
+        Some are directly sown, while others are transplanted.
+        </p>
+
+        <h6>Harvesting & Storage</h6>
+        <p>
+        Harvested manually or by machines; stored in cold storage or processed.
+        </p>
+
+        <p><strong>Learn more (Vegetable Farming & Techniques):</strong><br>
+        <a href="https://www.fao.org/agriculture/crops/thematic-sitemap/theme/vegetables/en/" target="_blank">
+        FAO – Vegetable Farming & Production
+        </a>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FRUIT MODAL -->
+<div class="modal fade" id="fruitModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Fruits</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+
+        <h6>What are Fruits?</h6>
+        <p>
+        Fruits are the edible reproductive parts of flowering plants that usually contain seeds.
+        </p>
+
+        <h6>Season (India)</h6>
+        <ul>
+          <li><strong>Perennial:</strong> Banana, Papaya, Guava</li>
+          <li><strong>Kharif:</strong> Watermelon, Muskmelon</li>
+          <li><strong>Rabi:</strong> Orange, Grapes</li>
+          <li><strong>Summer:</strong> Mango, Litchi</li>
+        </ul>
+
+        <h6>Cultivation</h6>
+        <p>
+        Fruit crops are usually grown from saplings. Drip irrigation is commonly used.
+        </p>
+
+        <h6>Harvesting & Storage</h6>
+        <p>
+        Fruits are harvested at maturity and stored in cold storage.
+        </p>
+
+        <p><strong>Learn more (Fruit Orchard Cultivation):</strong><br>
+        <a href="https://www.fao.org/agriculture/crops/thematic-sitemap/theme/fruits/en/" target="_blank">
+        FAO – Fruit Cultivation & Orchard Management
+        </a>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COTTON MODAL -->
+<div class="modal fade" id="cottonModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cotton</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+
+        <h6>What is Cotton?</h6>
+        <p>
+        Cotton is a fiber crop used mainly in the textile industry.
+        </p>
+
+        <h6>Season (Kharif)</h6>
+        <p>Sown: April–May | Harvested: September–October</p>
+
+        <h6>Cultivation</h6>
+        <p>
+        Cotton requires warm climate and well-drained soil. Pest control is very important.
+        </p>
+
+        <h6>Harvesting & Storage</h6>
+        <p>
+        Cotton is hand-picked or machine-harvested and sent to ginning mills.
+        </p>
+
+        <p><strong>Learn more (Cotton Farming & Pest Management):</strong><br>
+        <a href="https://www.fao.org/land-water/databases-and-software/crop-information/cotton/en/" target="_blank">
+        FAO – Cotton Cultivation & Crop Protection
+        </a>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="modern-footer py-5">
+  <div class="container text-center">
+    <h4 class="fw-bold">🌱 AgroLife</h4>
+    <p>Promoting sustainable agriculture.</p>
+    <hr>
+    <p class="small">© 2025 AgroLife • Made with care for nature 🌍</p>
+  </div>
+</footer>
+
+
+</body>
+</html>

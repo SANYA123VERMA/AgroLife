@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Organic Farming | AgroLife</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+}
+
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+}
+.navbar-brand {
+    color: #2e7d32 ;
+    font-weight: 700;
+}
+.nav-link {
+    color: #1b5e20 ;
+    font-weight: 500;
+}
+.nav-link:hover {
+    color: #00c853 ;
+}
+.dropdown-menu {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+.dropdown-item:hover {
+    background-color: #e8f5e9;
+}
+.navbar-nav{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* HERO */
+.hero{
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('media/organic2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 0;
+}
+
+/* CONTENT BOX */
+.box{
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.box:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* TITLES */
+.section-title{
+    color: #1b5e20;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ICON */
+.icon{
+    font-size: 30px;
+    color: #1b5e20;
+}
+
+/* IMAGE SIZE  */
+.section-img {
+    max-width: 70%;     
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+.img-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* ANIMATIONS */
+.fade-in{
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide-up{
+    animation: slideUp 1s ease-in-out;
+}
+
+.zoom-in{
+    animation: zoomIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {transform: translateY(20px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes zoomIn {
+    from {transform: scale(0.95); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+/* FOOTER */
+.modern-footer {
+    background: #e8f5e9;
+    color: #1b5e20;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+  <div class="container-fluid">
+    <img src="media/img1.jpg" width="50" alt="logo">
+    <a class="navbar-brand ms-2" href="index.html">AgroLife</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Farming</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="crops.html">Crop Farming</a></li>
+            <li><a class="dropdown-item" href="horticulture.html">Horticulture</a></li>
+            <li><a class="dropdown-item active" href="organic.html">Organic Farming</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Livestock</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="livestock.html">Livestock Management</a></li>
+            <li><a class="dropdown-item" href="dairy.html">Dairy Farming</a></li>
+            <li><a class="dropdown-item" href="poultry.html">Poultry Farming</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Resources</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="irrigation.html">Irrigation</a></li>
+            <li><a class="dropdown-item" href="machinery.html">Farm Machinery</a></li>
+            <li><a class="dropdown-item" href="soil.html">Soil Health</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero text-center">
+  <div class="container fade-in">
+    <h1 class="display-3 fw-bold">Organic Farming</h1>
+    <p class="lead mt-3">
+      Grow Naturally • Live Healthily • Protect the Earth 🌍
+    </p>
+    <a href="#methods" class="btn btn-success btn-lg mt-4">Explore Methods</a>
+  </div>
+</section>
+
+<main class="container my-5">
+
+<!-- WHAT IS ORGANIC FARMING -->
+<h2 class="section-title text-center slide-up">What is Organic Farming?</h2>
+
+<div class="row align-items-center my-4 slide-up">
+  <div class="col-md-6">
+    <p>
+      Organic farming is not just a method — it is a philosophy.  
+      It believes in working with nature, not against it.  
+      Instead of chemicals, it uses compost, manure, and natural processes to grow food that is safe, nutritious, and sustainable.
+    </p>
+    <p>
+      From healthy soil to clean water and biodiversity, organic farming builds a balanced ecosystem for future generations.
+    </p>
+  </div>
+
+  <!-- RIGHT SIDE IMAGE (CENTERED + MEDIUM SIZE) -->
+  <div class="col-md-6 img-center zoom-in">
+    <img src="media/organic3.jpg" class="img-fluid section-img">
+  </div>
+</div>
+
+<div class="row g-4 my-4 slide-up">
+<div class="col-md-6">
+<div class="box">
+<h5><i class="bi bi-leaf icon me-2"></i>Key Features</h5>
+<ul>
+<li>Use of natural manure and compost</li>
+<li>No chemical pesticides</li>
+<li>Emphasis on soil fertility</li>
+<li>Eco-friendly farming</li>
+</ul>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="box">
+<h5><i class="bi bi-check-circle icon me-2"></i>Benefits</h5>
+<ul>
+<li>Healthy food</li>
+<li>Better soil quality</li>
+<li>Cleaner water</li>
+<li>Environmental protection</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- METHODS OF ORGANIC FARMING -->
+<h2 class="section-title mt-5 text-center slide-up" id="methods">
+  Methods of Organic Farming
+</h2>
+<p class="text-center text-muted mb-4 slide-up">
+  These scientific and traditional methods help maintain soil fertility, protect biodiversity, and ensure sustainable farming.
+</p>
+
+<!-- SINGLE MEDIUM IMAGE BEFORE METHODS -->
+<div class="row my-3">
+  <div class="col-md-12 img-center zoom-in">
+    <img src="media/compost2.jpg" class="img-fluid section-img">
+  </div>
+</div>
+
+<div class="row g-4 slide-up">
+
+<div class="col-md-6">
+<div class="box">
+<h5><i class="bi bi-recycle icon me-2"></i> Composting</h5>
+<p>
+Composting is the process of decomposing organic waste such as crop residue, kitchen waste, and animal manure into rich organic fertilizer.
+</p>
+<ul>
+<li>Improves soil structure</li>
+<li>Increases nutrient availability</li>
+<li>Reduces chemical fertilizer use</li>
+</ul>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="box">
+<h5><i class="bi bi-arrow-repeat icon me-2"></i> Crop Rotation</h5>
+<p>
+Crop rotation involves growing different crops in the same field in different seasons.
+</p>
+<ul>
+<li>Prevents soil nutrient depletion</li>
+<li>Reduces pest and disease attacks</li>
+<li>Maintains soil fertility</li>
+</ul>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="box">
+<h5><i class="bi bi-droplet icon me-2"></i> Mulching</h5>
+<p>
+Mulching is covering the soil with organic materials like straw, leaves, or compost.
+</p>
+<ul>
+<li>Retains soil moisture</li>
+<li>Prevents weed growth</li>
+<li>Protects soil from erosion</li>
+</ul>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="box">
+<h5><i class="bi bi-bug icon me-2"></i> Natural Pest Control</h5>
+<p>
+This method uses beneficial insects and natural predators instead of chemical pesticides.
+</p>
+<ul>
+<li>Protects crops naturally</li>
+<li>Maintains ecological balance</li>
+<li>Safe for humans and animals</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<!-- ORGANIC FERTILIZERS SECTION -->
+<h2 class="section-title mt-5 text-center slide-up" id="fertilizers">
+  Types of Organic Fertilizers
+</h2>
+<p class="text-center text-muted mb-4 slide-up">
+  These natural fertilizers improve soil fertility without harming the environment.
+</p>
+
+<!-- 3 SMALLER UNIFORM IMAGES (w-75) -->
+<div class="row my-3">
+  <div class="col-md-4 text-center">
+    <img src="media/compost3.webp" class="img-fluid section-img w-75">
+  </div>
+  <div class="col-md-4 text-center">
+    <img src="media/vermicompost.jpg" class="img-fluid section-img w-75">
+  </div>
+  <div class="col-md-4 text-center">
+    <img src="media/cowdung.jpg" class="img-fluid section-img w-75">
+  </div>
+</div>
+
+<div class="row g-4 slide-up">
+
+<div class="col-md-4">
+<div class="box text-center">
+<i class="bi bi-flower1 icon"></i>
+<h5 class="mt-2">Compost</h5>
+<p>Decomposed organic waste that enriches soil with nutrients.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="box text-center">
+<i class="bi bi-droplet-half icon"></i>
+<h5 class="mt-2">Vermicompost</h5>
+<p>Produced by earthworms; improves soil structure and fertility.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="box text-center">
+<i class="bi bi-bucket icon"></i>
+<h5 class="mt-2">Cow Dung Manure</h5>
+<p>Traditional natural fertilizer rich in organic matter.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="box text-center">
+<i class="bi bi-leaf icon"></i>
+<h5 class="mt-2">Green Manure</h5>
+<p>Grown crops plowed back into soil to increase nutrients.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="box text-center">
+<i class="bi bi-bug icon"></i>
+<h5 class="mt-2">Biofertilizers</h5>
+<p>Beneficial microbes that enhance nutrient availability.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="box text-center">
+<i class="bi bi-droplet icon"></i>
+<h5 class="mt-2">Liquid Organic Fertilizer</h5>
+<p>Made from compost tea or fermented plant extracts.</p>
+</div>
+</div>
+
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="modern-footer py-5">
+  <div class="container text-center">
+    <h4 class="fw-bold">🌱 AgroLife</h4>
+    <p>Promoting sustainable agriculture.</p>
+    <hr>
+    <p class="small">© 2025 AgroLife • Made with care for nature 🌍</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

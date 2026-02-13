@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irrigation | AgroLife</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+body{
+    background:#f0fff4;
+}
+
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+}
+.navbar-brand {
+    color: #2e7d32;
+    font-weight: 700;
+}
+.nav-link {
+    color: #1b5e20;
+    font-weight: 500;
+}
+.nav-link:hover {
+    color: #00c853;
+}
+.navbar-nav{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== NAVBAR SOCIAL ICONS ===== */
+.navbar .social-icons a{
+    color: #1b5e20 ;  
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.navbar .social-icons a:hover{
+    color: #00c853 !important;   
+}
+/* ========================================== */
+
+/* HERO SECTION */
+.irrigation-hero{
+    background:url('media/irr1.jpg') center/cover no-repeat;
+    height:45vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+.irrigation-overlay{
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.45);
+}
+.irrigation-content{
+    position:relative;
+    color:white;
+}
+
+/* INFO SECTION */
+.irrigation-info{
+    background:#e8f5e9;
+    padding:60px 0;
+}
+
+/* FEATURE CARDS */
+.feature-card{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+.feature-card:hover{
+    transform:translateY(-5px);
+}
+
+/* ICONS INSIDE CARDS (GREEN) */
+.feature-card i{
+    color: #2e7d32;
+}
+.feature-card:hover i{
+    color: #00c853 ;
+}
+
+/* METHOD CARDS */
+.method-card{
+    border-radius:18px;
+    border:none;
+    overflow:hidden;
+    background:white;
+    transition:0.3s;
+    box-shadow:0 6px 15px rgba(0,0,0,0.08);
+}
+.method-card img{
+    height:220px;
+    object-fit:cover;
+}
+
+/* FOOTER */
+.modern-footer {
+    background: linear-gradient(to right, #f0fff4, #e6ffee);
+    color: #1b5e20;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+  <div class="container-fluid">
+
+    <img src="media/img1.jpg" width="50" alt="logo">
+    <a class="navbar-brand ms-2" href="index.html">AgroLife</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Farming</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="crops.html">Crop Farming</a></li>
+            <li><a class="dropdown-item" href="horticulture.html">Horticulture</a></li>
+            <li><a class="dropdown-item" href="organic.html">Organic Farming</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Livestock</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="livestock.html">Livestock Management</a></li>
+            <li><a class="dropdown-item" href="dairy.html">Dairy Farming</a></li>
+            <li><a class="dropdown-item" href="poultry.html">Poultry Farming</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Resources</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="irrigation.html">Irrigation</a></li>
+            <li><a class="dropdown-item" href="machinery.html">Farm Machinery</a></li>
+            <li><a class="dropdown-item" href="soil.html">Soil Health</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- SOCIAL ICONS (RIGHT) -->
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="irrigation-hero">
+  <div class="irrigation-overlay"></div>
+  <div class="container irrigation-content text-center">
+    <h1 class="display-4 fw-bold">Irrigation</h1>
+    <p class="lead">
+      Efficient water management techniques for sustainable agriculture.
+    </p>
+  </div>
+</section>
+
+<!-- WHAT IS IRRIGATION -->
+<section class="irrigation-info">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="fw-bold text-success">💧 What is Irrigation?</h2>
+        <p>
+          Irrigation is the artificial supply of water to crops through canals, wells, tube wells, sprinklers, or drip systems.
+          It is used in areas where rainfall is insufficient, irregular, or seasonal.
+        </p>
+        <p>
+          Proper irrigation improves crop yield, reduces drought risks, and supports sustainable farming.
+        </p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="media/irr5.jpg" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOURCES OF IRRIGATION -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold text-success text-center mb-4">🌊 Sources of Irrigation</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-6">
+        <div class="feature-card h-100">
+          <h5>Surface Water Sources</h5>
+          <p>
+            Surface water includes rivers, canals, lakes, and reservoirs. Rainwater is stored in large dams and
+            distributed through canals to farmlands.
+          </p>
+          <p>
+            This method is very effective for large agricultural regions but depends heavily on rainfall and river flow.
+          </p>
+          <ul>
+            <li><strong>Examples:</strong> Rivers, Canals, Lakes, Dams</li>
+            <li>Best suited for large farming areas</li>
+            <li>Requires good canal maintenance</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="feature-card h-100">
+          <h5>Groundwater Sources</h5>
+          <p>
+            Groundwater is stored underground in porous rocks and soil layers. Farmers extract this water using wells,
+            tube wells, and bore wells.
+          </p>
+          <p>
+            It is reliable but excessive use can lower the water table, so sustainable usage is important.
+          </p>
+          <ul>
+            <li><strong>Examples:</strong> Wells, Tube wells, Bore wells</li>
+            <li>Most commonly used in rural India</li>
+            <li>Needs careful management</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="feature-card h-100">
+          <h5>Rainwater Harvesting</h5>
+          <p>
+            Rainwater harvesting involves collecting and storing rainwater in tanks, ponds, or underground reservoirs
+            for later use in irrigation.
+          </p>
+          <p>
+            It reduces dependence on groundwater and is very useful in drought-prone areas.
+          </p>
+          <ul>
+            <li>Eco-friendly and cost-effective</li>
+            <li>Helps recharge groundwater</li>
+            <li>Useful in water-scarce regions</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- IMPORTANCE -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-success">🌱 Importance of Irrigation</h2>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="feature-card h-100 text-center">
+          <i class="fas fa-seedling"></i>
+          <h5 class="mt-3">Better Crop Growth</h5>
+          <p>Ensures plants get water at critical stages.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-card h-100 text-center">
+          <i class="fas fa-chart-line"></i>
+          <h5 class="mt-3">Higher Yield</h5>
+          <p>Increases productivity and farm income.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-card h-100 text-center">
+          <i class="fas fa-tint"></i>
+          <h5 class="mt-3">Water Conservation</h5>
+          <p>Modern methods reduce water wastage.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- METHODS OF IRRIGATION -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-success">🚜 Methods of Irrigation</h2>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card method-card h-100">
+          <img src="media/irr2.jpg" class="card-img-top" alt="Canal Irrigation">
+          <div class="card-body text-center">
+            <h5>Canal Irrigation</h5>
+            <p>Water is supplied through canals from rivers or dams.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card method-card h-100">
+          <img src="media/irr3.jpg" class="card-img-top" alt="Sprinkler Irrigation">
+          <div class="card-body text-center">
+            <h5>Sprinkler Irrigation</h5>
+            <p>Water is sprayed like rainfall using sprinklers.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card method-card h-100">
+          <img src="media/irr4.webp   " class="card-img-top" alt="Drip Irrigation">
+          <div class="card-body text-center">
+            <h5>Drip Irrigation</h5>
+            <p>Water is supplied drop by drop near roots.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ADVANTAGES & LIMITATIONS -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold text-success text-center mb-4">✔️ Advantages & ❌ Limitations</h2>
+
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="feature-card">
+          <h5>Advantages</h5>
+          <ul>
+            <li>Regular water supply</li>
+            <li>Higher productivity</li>
+            <li>Supports multiple cropping</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="feature-card">
+          <h5>Limitations</h5>
+          <ul>
+            <li>Risk of waterlogging</li>
+            <li>Groundwater depletion</li>
+            <li>High installation cost</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="modern-footer py-5 text-center">
+  <h4 class="fw-bold">🌱 AgroLife</h4>
+  <p>Promoting sustainable agriculture.</p>
+  <hr>
+  <p class="small">© 2025 AgroLife • Made with care for nature 🌍</p>
+</footer>
+
+</body>
+</html>
